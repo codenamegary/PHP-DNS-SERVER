@@ -1,6 +1,6 @@
 <?php
 
-class JsonStorageProviderTest extends PHPUnit_Framework_TestCase {
+class JsonStorageProviderTest extends TestCase {
     
     /**
      * @var yswery\DNS\JsonStorageProvider

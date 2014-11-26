@@ -1,6 +1,6 @@
 <?php
 
-class RecordTypeEnumTest extends PHPUnit_Framework_TestCase {
+class RecordTypeEnumTest extends TestCase {
 
     public function testGetsHostRecordIndex()
     {
