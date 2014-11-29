@@ -9,7 +9,7 @@ class JsonStorageProviderTest extends TestCase {
     
     public function setUp()
     {
-        $this->storage = new \yswery\DNS\JsonStorageProvider(__DIR__ . '/test_records.json');
+        $this->storage = new \yswery\DNS\JsonStorageProvider(__DIR__ . '/utils/test_records.json');
     }
     
     public function testHostRecordResolves()
@@ -79,12 +79,12 @@ class JsonStorageProviderTest extends TestCase {
         $this->setExpectedException('Exception', 'Unable to open dns record file.');
         $jsonAdapter = new \yswery\DNS\JsonStorageProvider('blah.json');
         $this->setExpectedException('Exception', 'Unable to parse dns record file.');
-        $jsonAdapter = new \yswery\DNS\JsonStorageProvider('invalid_dns_records.json');
+        $jsonAdapter = new \yswery\DNS\JsonStorageProvider(__DIR__ . '/utils/invalid_dns_records.json');
     }
 
     public function testConstructorLoadsRecords()
     {
-        $this->storage = new \yswery\DNS\JsonStorageProvider(__DIR__ . '/test_records.json');
+        $this->storage = new \yswery\DNS\JsonStorageProvider(__DIR__ . '/utils/test_records.json');
         $this->assertTrue($this->storage !== false);
     }
     
