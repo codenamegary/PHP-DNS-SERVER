@@ -400,7 +400,10 @@ class Server {
 
         $type = isset($codes[$code]) ? $codes[$code] : 'Unknown Error';
 
-        die(sprintf('DNS Server error: [%s] "%s" in file "%s" on line "%d".%s', $type, $error, $file, $line, PHP_EOL));
+        $message = sprintf('DNS Server error: [%s] "%s" in file "%s" on line "%d".%s', $type, $error, $file, $line, PHP_EOL);
+
+        trigger_error($message, E_USER_ERROR);
+
     }
 
 }
