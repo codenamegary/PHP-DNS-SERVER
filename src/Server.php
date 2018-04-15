@@ -2,7 +2,7 @@
 
 namespace yswery\DNS;
 
-use yswery\DNS\Resolver\ResolverInterface;
+use yswery\DNS\ResolverInterface;
 
 class Server
 {
